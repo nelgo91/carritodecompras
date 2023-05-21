@@ -1,0 +1,58 @@
+body {
+    margin: 0px;
+}
+
+.nav-container{
+    position: sticky;
+    z-index: 3;
+    top: 0;
+}
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    height: 12vh;
+    color: white;
+    background-color: #A4E6FA;
+    color: black;
+}
+
+.navbar-logo{
+    margin-left: 20px;
+    justify-self: start;
+    cursor: pointer;
+    color: #895FF5;
+}
+
+.ver-carrito{
+    color: white;
+    cursor: pointer;
+    margin-right: 20px;
+}
+
+.banner{
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),url(./img/fondomain.jpg);
+}
+
+.banner-container{
+    text-align: center;
+    padding: 15% 0;
+    color: #895FF5;
+}
+.banner h1{
+    margin: 0;
+    color: #895FF5;
+    text-shadow:  1px 1px 3px rgba(0,0,0, 0.2);
+    font-size: 62px;
+    font-weight: bold;
+}
+
+.banner p{
+    font-size: 30px;
+    color: #A4E6FA;
+    opacity: 0.7;
+    text-shadow:  1px 1px 3px rgba(0,0,0, 0.2);
+}
