@@ -38,7 +38,7 @@ const productos = [
         },
 ];
 
-let carrito = JSON.parse(localStorage.getItem(carrito)) || [];
+let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
 
 productos.forEach((product)=>{
     let content = document.createElement("div");
