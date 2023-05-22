@@ -1,6 +1,6 @@
 body {
     margin: 0px;
-    background-color:#AE7DE6;
+    background-color:#AE79A7;
 
 }
 
@@ -23,7 +23,7 @@ body {
     margin-left: 20px;
     justify-self: start;
     cursor: pointer;
-    color: #895FF5;
+    color: #AE79A7;
 }
 
 .ver-carrito{
@@ -42,11 +42,11 @@ body {
 .banner-container{
     text-align: center;
     padding: 15% 0;
-    color: #895FF5;
+    color: #AE79A7;
 }
 .banner h1{
     margin: 0;
-    color: #895FF5;
+    color: #AE79A7;
     text-shadow:  1px 1px 3px rgba(0,0,0, 0.2);
     font-size: 62px;
     font-weight: bold;
@@ -66,7 +66,7 @@ body {
     margin-top: 30px;
     margin-left: 80px;
     margin-right: 80px;
-    background-color: #AE7DE6;
+    background-color: #AE79A7;
 }
 
 .card {
