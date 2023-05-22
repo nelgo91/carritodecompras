@@ -1,6 +1,6 @@
 body {
     margin: 0px;
-    background-color:#A670E4;
+    background-color:#AE7DE6;
 
 }
 
@@ -66,7 +66,7 @@ body {
     margin-top: 30px;
     margin-left: 80px;
     margin-right: 80px;
-    background-color:#A670E4;
+    background-color: #AE7DE6;
 }
 
 .card {
@@ -75,7 +75,7 @@ body {
     margin: auto;
     text-align: center;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    background-color: rgb(235, 213, 145);
+    background-color: #DFDB63;
 }
 
 .card > img {
