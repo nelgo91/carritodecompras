@@ -1,5 +1,7 @@
 body {
     margin: 0px;
+    background-color: rgb(245, 148, 200);
+
 }
 
 .nav-container{
@@ -64,6 +66,7 @@ body {
     margin-top: 30px;
     margin-left: 80px;
     margin-right: 80px;
+    background-color: rgb(245, 148, 200);
 }
 
 .card {
@@ -72,6 +75,7 @@ body {
     margin: auto;
     text-align: center;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    background-color: rgb(235, 213, 145);
 }
 
 .card > img {
