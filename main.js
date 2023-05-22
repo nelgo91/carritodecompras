@@ -9,6 +9,7 @@ const productos = [
         precio: 500,
         img:
             "img/pancitos.jpg",
+        cantidad: 1,
     },
     {
         id: 2,
@@ -16,6 +17,7 @@ const productos = [
         precio: 600,
         img:
             "img/alfajorcitosdemaicena.jpg",
+        cantidad: 1,
     },
     {
         id: 3,
@@ -23,6 +25,7 @@ const productos = [
         precio: 800,
         img:
             "img/budines3.jpg",
+        cantidad: 1,
     },
     {
         id: 4,
@@ -30,7 +33,8 @@ const productos = [
         precio: 1200,
         img:
             "img/bizcochuelode vainilla.jpg",
-    },
+        cantidad: 1,
+        },
 ];
 
 let carrito = [];
@@ -53,12 +57,25 @@ productos.forEach((product)=>{
     content.append(comprar);
 
     comprar.addEventListener("click", () =>{
+    
+        const repeat = carrito.some((repeatProduct) => repeatProduct.id === product.id);
+
+        if(repeat){
+            carrito.map((prod) => {
+                if(prod.id === prod.id){
+                    prod.cantidad++;
+                }
+            });
+        }else{
+
         carrito.push({
             id : product.id,
             img: product.img,
             nombre: product.nombre,
             precio: product.precio,
-        })
+            cantidad: product.cantidad,
+        });
+        }
     })
 });
 
@@ -90,6 +107,8 @@ const pintarCarrito = () => {
             <img src="${product.img}">
             <h3>${product.nombre}</h3>
             <p>${product.precio} $</p>
+            <P>Cantidad: ${product.cantidad}</p>
+            <p>Total: ${product.cantidad * product.precio}</p>
         `;
 
         modalContainer.append(carritoContent);
@@ -102,7 +121,7 @@ const pintarCarrito = () => {
     });
 
 
-    const total = carrito.reduce((acc, el) => acc + el.precio, 0);
+    const total = carrito.reduce((acc, el) => acc + el.precio * el.cantidad, 0);
 
     const totalBuying = document.createElement("div")
     totalBuying.className = "total-content"
