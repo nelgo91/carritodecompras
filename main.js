@@ -6,28 +6,28 @@ const productos = [
     {
         id: 1,
         nombre: "Pancitos",
-        precio: 100,
+        precio: 500,
         img:
             "img/pancitos.jpg",
     },
     {
         id: 2,
         nombre: "Alfajorcitos de Maicena",
-        precio: 250,
+        precio: 600,
         img:
             "img/alfajorcitosdemaicena.jpg",
     },
     {
         id: 3,
         nombre: "Budines",
-        precio: 400,
+        precio: 800,
         img:
             "img/budines3.jpg",
     },
     {
         id: 4,
         nombre: "Bizcochuelo de Vainilla",
-        precio: 800,
+        precio: 1200,
         img:
             "img/bizcochuelode vainilla.jpg",
     },
@@ -63,6 +63,8 @@ productos.forEach((product)=>{
 });
 
 verCarrito.addEventListener("click", () => {
+    modalContainer.innerHTML = "";
+    modalContainer.style.display = "flex"
     const modalHeader = document.createElement("div");
     modalHeader.className = "modal-header"
     modalHeader.innerHTML = `
@@ -73,6 +75,10 @@ verCarrito.addEventListener("click", () => {
     const modalbutton = document.createElement("h1");
     modalbutton.innerText = "x";
     modalbutton.className = "modal-header-button";
+
+    modalbutton.addEventListener("click", () => {
+        modalContainer.style.display = "none";
+    })
 
     modalHeader.append(modalbutton);
 
