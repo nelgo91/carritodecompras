@@ -54,7 +54,7 @@ productos.forEach((product)=>{
 
     comprar.addEventListener("click", () =>{
         carrito.push({
-            id : product,id,
+            id : product.id,
             img: product.img,
             nombre: product.nombre,
             precio: product.precio,
@@ -78,7 +78,7 @@ verCarrito.addEventListener("click", () => {
 
 
     carrito.forEach((product) => {
-        let carritocontent = document.createElement("div")
+        let carritoContent = document.createElement("div")
         carritoContent.className = "modal-content"
         carritoContent.innerHTML = `
             <img src="${product.img}">
@@ -86,6 +86,6 @@ verCarrito.addEventListener("click", () => {
             <p>${product.precio} $</p>
         `;
 
-        modalContainer.append(carritocontent)
+        modalContainer.append(carritoContent)
     })
 });
