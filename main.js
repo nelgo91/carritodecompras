@@ -1,6 +1,7 @@
 const shopContent = document.getElementById("shopContent");
 const verCarrito = document.getElementById("verCarrito");
 const modalContainer = document.getElementById("modal-container");
+const cantidadCarrito = document.getElementById("cantidadCarrito");
 
 const productos = [
     {
@@ -76,6 +77,7 @@ productos.forEach((product)=>{
             cantidad: product.cantidad,
         });
         }
+        carritoCounter()
     })
 });
 
@@ -124,7 +126,7 @@ const pintarCarrito = () => {
     const total = carrito.reduce((acc, el) => acc + el.precio * el.cantidad, 0);
 
     const totalBuying = document.createElement("div")
-    totalBuying.className = "total-content"
+    totalBuying.className = "total-content";
     totalBuying.innerHTML = `total a pagar: ${total} $`;
     modalContainer.append(totalBuying);
 };
@@ -137,6 +139,11 @@ const eliminarProducto = () => {
     carrito = carrito.filter((carritoId) => {
         return carritoId !== foundId;
     });
-
+    carritoCounter()
     pintarCarrito()
 };
+
+const carritoCounter = () => {
+    cantidadCarrito.style.display = "block";
+    cantidadCarrito.innerText = carrito.length
+}
