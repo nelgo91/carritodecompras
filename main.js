@@ -93,6 +93,11 @@ const pintarCarrito = () => {
         `;
 
         modalContainer.append(carritoContent);
+
+        let eliminar = document.createElement("span");
+        eliminar.innerText = "🗑";
+        eliminar.className = "delete-product";
+        carritoContent.append(eliminar);
     });
 
 
